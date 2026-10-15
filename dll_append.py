@@ -1,5 +1,6 @@
 # doubly linked list
-# append, insert and print functions
+# append, insert and print function
+
 class Node:
     def __init__(self, value):
         self.prev = None
