@@ -12,6 +12,14 @@ class stack:
     def push(self, new_node):
         new_node.next=self.top
         self.top=new_node
+    def pop(self):
+        if self.isempty():
+            print("Stack is empty...")
+        else:
+            temp=self.top
+            print("Popped element : ",temp.data)
+            self.top=self.top.next
+            temp=None
     def print(self):
         if self.isempty():
             print("Stack is empty...")
@@ -28,4 +36,11 @@ st.push(Node(20))
 st.push(Node(30))
 st.push(Node(40))
 st.push(Node(50))
+st.print()
+st.pop()
+st.pop()
+st.pop()
+st.pop()
+st.pop() # when the stack is empty it should display that message
+st.pop() # when we call pop functions 5 times it emptys the stack as there are only 5 elements in the list
 st.print()
