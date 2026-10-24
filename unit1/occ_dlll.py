@@ -1,4 +1,5 @@
 # write a fuction to count the number of ocurrence of a number in a doubly linear linked list
+# occurence 
 
 class Node:
     def __init__(self, data):
