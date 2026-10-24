@@ -1,4 +1,5 @@
 # write a function to swap fisrt and last node in a doubly linaer linked list
+#
 
 class Node:
     def __init__(self, data):
