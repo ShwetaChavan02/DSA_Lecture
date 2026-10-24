@@ -1,7 +1,7 @@
 
 # Doubly Linked List
 # Append, Insert and Print
-
+# 
 class Node:
     def __init__(self, value):
         self.prev = None
