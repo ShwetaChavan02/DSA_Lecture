@@ -3,24 +3,27 @@
 
 class Node:
     def __init__(self,value):
-        self.data=value
-        self.next=None
+        self.data = value
+        self.next = None
 class LQueue:
     def __init__(self):
-        self.front=self.rear=None
+        self.front = self.rear = None
     def enqueue(self,new_node):
         if self.rear:
-            self.rear.next=new_node
-            self.rear=new_node
+            self.rear.next = new_node
+            self.rear = new_node
         else:
-            self.front=self.rear=new_node
+            self.front = self.rear = new_node
     def dequeue(self):
-        temp=self.front
+        temp = self.front
         print("deleted node: ",temp.data)
-        self.front=self.front.next
-        temp=None
+        self.front = self.front.next
+        if self.front == None: # if there is only one node
+            print("Queue is empty now")
+            self.rear = None
+        temp = None
     def print(self):
-        temp=self.front
+        temp = self.front
         while temp:
             print(temp.data,end="->")
             temp=temp.next
@@ -32,6 +35,9 @@ que.enqueue(Node(88))
 que.enqueue(Node(10))
 que.enqueue(Node(54))
 que.print()
+que.dequeue()
+que.dequeue()
+que.dequeue()
 que.dequeue()
 que.print()
 
