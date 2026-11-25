@@ -50,7 +50,19 @@ class BST:
         while temp.left is not None:
             temp = temp.left # traversing the left subtree of temp to find the successor node
         return temp
-    
+
+    # searching a node in BST
+    def search(self, key):
+        temp = self.root
+        while temp:
+            if temp.data == key:
+                return True
+            elif key < temp.data:
+                temp = temp.left # searching in left subtree of temp
+            else:
+                temp = temp.right # searching in right subtree of temp
+        return False
+
     def inorder(self, rt):
         if rt is None:
             return
@@ -106,3 +118,7 @@ b1.inorder(b1.root)
 b1.del_node(b1.root, 4)
 print("\nInorder after deletion: ", end=" ")
 b1.inorder(b1.root)
+if b1.search(4):
+    print("\n Node found")
+else:
+    print("\n Node not found")
